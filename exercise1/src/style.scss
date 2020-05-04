@@ -1,8 +1,8 @@
 @import "theme";
 
-.container-1 {
+.container {
     display: flex;
-    gap: 0.2rem;
+    justify-content: center;
 
     .box {
         border-radius: 0.25rem;
@@ -10,14 +10,10 @@
         height: 100px;
         display: flex;
         align-items: center;
-        justify-content: center;    
+        justify-content: center;
+        margin: 0.1rem;
     }
     
-    .base-color {
-        background-color: $base-color;
-        width: 150px;
-    }
-
     .color-box-text {
         display: block;
         width: 100%;
@@ -27,12 +23,20 @@
         color: lightgrey;
     }
 
-    @for $i from 1 through 4 { 
-        .darken-#{$i} {
-            background-color: darken($color: $base-color, $amount: $i * 8%);
+    $baseIndex: 1;
+    @each $mycolor in $colors {
+        .base-color-#{$baseIndex} {
+            background-color: $mycolor;
+            width: 150px;
         }
-        .lighten-#{$i} {
-            background-color: lighten($color: $base-color, $amount: $i * 8%);
-        }        
+        @for $i from 1 through 4 { 
+            .darken-#{$baseIndex}-#{$i} {
+                background-color: darken($color: $mycolor, $amount: $i * 8%);
+            }
+            .lighten-#{$baseIndex}-#{$i} {
+                background-color: lighten($color: $mycolor, $amount: $i * 8%);
+            }        
+        }
+        $baseIndex: $baseIndex+1;
     }
 }
