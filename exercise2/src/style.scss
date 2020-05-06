@@ -1,0 +1,24 @@
+@import "theme1";
+
+.container-theme-1 {    
+    display: flex;
+
+    .box {
+        border-radius: $theme1-border-radius;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .color-base {
+        background-color: $theme1-color-base;
+    }
+
+    .color-important {
+        background-color: adjust-hue($color:$theme1-color-base, $degrees:180);
+    }
+
+    .color-warning {
+        background-color: adjust-hue($color:$theme1-color-base, $degrees:-180);
+    }    
+
+}
