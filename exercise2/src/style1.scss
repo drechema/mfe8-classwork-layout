@@ -1,0 +1,29 @@
+@import "theme1";
+
+.theme-1 {
+    
+    .font-primary {
+        font-family: $theme1-font-primary;
+    }
+    
+    .font-secondary {
+        font-family: $theme1-font-secondary;
+    }
+
+    .item {
+        border-radius: $theme1-border-radius;
+    }
+
+    .color-base {
+        background-color: $theme1-color-base;
+    }
+
+    .color-important {
+        background-color: adjust-hue($color:$theme1-color-base, $degrees:45);
+    }
+
+    .color-warning {
+        background-color: adjust-hue($color:$theme1-color-base, $degrees:-45);
+    }    
+
+}
