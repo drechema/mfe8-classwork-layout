@@ -24,6 +24,10 @@
 
     .color-warning {
         background-color: adjust-hue($color:$theme1-color-base, $degrees:-45);
-    }    
+    }
+
+    .shadow {
+        box-shadow: $theme1-shadow;
+    }
 
 }
