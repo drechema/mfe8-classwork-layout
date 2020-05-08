@@ -1,0 +1,26 @@
+@media screen and (max-width: 900px) {
+    .flex-menu {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .flex-menu {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.flex-menu div {
+    display: inline-block;
+    width: 10rem;
+    background-color: rgb(74, 130, 177);
+    color: white;
+    padding: 0.5rem;
+}
+
+.flex-menu div:hover{
+    cursor: pointer;
+    background-color:  rgb(13, 69, 116);
+}
