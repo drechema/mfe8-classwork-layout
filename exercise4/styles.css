@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;    
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 250px 2em 12em 2em 4em;
+    grid-template-areas:
+        "image"
+        "header"
+        "main"
+        "footer"
+        "next";
+    border: 1px solid rgba(158, 155, 155, 0.692);
+    font-family: Gulim;
+    margin: 0.5rem;
+}
+
+.card div {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;    
+}
+
+.card div p {
+    margin: 0;
+}
+
+.card .image {
+    grid-area: image;
+    padding: 0;
+}
+
+.card .image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card .header {
+    grid-area: header;
+}
+
+.card .header .title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.card .main {
+    grid-area: main;
+    text-align: justify;
+}
+
+.card .footer {
+    grid-area: footer;
+    text-align: right;
+    font-size: small;
+}
+
+.card .next {
+    grid-area: next;
+}
+
+.card .next .btn {
+    display: block;
+    height: 3em;
+    padding-top: 0.2em;
+    text-align: center;
+    background-color: rgb(161, 183, 196);
+    cursor: pointer;
+}
+
+.card .next .btn span {
+    display: block;
+    padding-top: 1em;
+}
+
+.card .next .btn:hover {
+    color:white;
+    font-weight: bold;
+    border: 1px solid grey;
+}
